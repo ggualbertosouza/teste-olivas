@@ -61,19 +61,22 @@ function App() {
                 className="object-contain"
               />
               {isLoading && <Loading />}
-              {data?.slice(1, 2).map((posts) => {
-                return (
-                  <Post.Root key={posts.id}>
-                    <Post.Slug slug={`${posts.slug.replace(/-/g, " ")}`} />
-                    <Post.Date date={formatter.format(new Date(posts.date))} />
-                    <Post.Title title={`${posts.title.rendered}`} size="xl" />
-                    <Post.Content
-                      text={`${posts.content.rendered}`}
-                      variant="default"
-                    />
-                  </Post.Root>
-                );
-              })}
+              {data &&
+                data?.slice(1, 2).map((posts) => {
+                  return (
+                    <Post.Root key={posts.id}>
+                      <Post.Slug slug={`${posts.slug.replace(/-/g, " ")}`} />
+                      <Post.Date
+                        date={formatter.format(new Date(posts.date))}
+                      />
+                      <Post.Title title={`${posts.title.rendered}`} size="xl" />
+                      <Post.Content
+                        text={`${posts.content.rendered}`}
+                        variant="default"
+                      />
+                    </Post.Root>
+                  );
+                })}
             </div>
 
             {/* Articles */}
@@ -81,14 +84,15 @@ function App() {
               <h2 className="text-xlt_pink text-3xl py-2">Outras postagens</h2>
               <hr className="pb-2" />
               {isLoading && <Loading />}
-              {data?.slice(3, 9).map((posts: IPost) => (
-                <Post.Root key={posts.id}>
-                  <Post.Title title={`${posts.title.rendered}`} />
-                  <Post.Date date={formatter.format(new Date(posts.date))} />
-                  <Post.Slug slug={`${posts.slug.replace(/-/g, " ")}`} />
-                  <hr />
-                </Post.Root>
-              ))}
+              {data &&
+                data?.slice(3, 9).map((posts: IPost) => (
+                  <Post.Root key={posts.id}>
+                    <Post.Title title={`${posts.title.rendered}`} />
+                    <Post.Date date={formatter.format(new Date(posts.date))} />
+                    <Post.Slug slug={`${posts.slug.replace(/-/g, " ")}`} />
+                    <hr />
+                  </Post.Root>
+                ))}
               <Button variant="secondary">Ver mais</Button>
             </div>
           </div>
@@ -103,20 +107,24 @@ function App() {
               <Title.Bar variant="white" />
             </Title.Root>
             {isLoading && <Loading />}
-            {data?.slice(6, 9).map((posts: IPost) => (
-              <Post.Root key={posts.id}>
-                <hr />
-                <Post.Date
-                  date={formatter.format(new Date(posts.date))}
-                  variant="white"
-                />
-                <Post.Slug
-                  slug={`${posts.slug.replace(/-/g, " ")}`}
-                  variant="blue"
-                />
-                <Post.Title title={`${posts.title.rendered}`} variant="white" />
-              </Post.Root>
-            ))}
+            {data &&
+              data?.slice(6, 9).map((posts: IPost) => (
+                <Post.Root key={posts.id}>
+                  <hr />
+                  <Post.Date
+                    date={formatter.format(new Date(posts.date))}
+                    variant="white"
+                  />
+                  <Post.Slug
+                    slug={`${posts.slug.replace(/-/g, " ")}`}
+                    variant="blue"
+                  />
+                  <Post.Title
+                    title={`${posts.title.rendered}`}
+                    variant="white"
+                  />
+                </Post.Root>
+              ))}
             <Button variant="white">Ver mais</Button>
           </div>
 
@@ -125,26 +133,27 @@ function App() {
             <img src={sketch2} alt="women studying image" />
             <Dots />
             {isLoading && <Loading />}
-            {data?.slice(4, 5).map((posts) => {
-              return (
-                <Post.Root key={posts.id}>
-                  <div className="flex items-center gap-2">
-                    <Post.Slug slug={posts.slug.replace(/-/g, " ")} />
-                    <Post.Date
-                      date={formatter.format(new Date(posts.date))}
-                      variant="blue"
-                    />
-                  </div>
-                  <Post.Title title={`${posts.title.rendered}`} size="lg" />
-                  <div className="w-[80%]">
-                    <Post.Content
-                      text={`${posts.yoast_head_json.description}`}
-                      variant="description"
-                    />
-                  </div>
-                </Post.Root>
-              );
-            })}
+            {data &&
+              data?.slice(4, 5).map((posts) => {
+                return (
+                  <Post.Root key={posts.id}>
+                    <div className="flex items-center gap-2">
+                      <Post.Slug slug={posts.slug.replace(/-/g, " ")} />
+                      <Post.Date
+                        date={formatter.format(new Date(posts.date))}
+                        variant="blue"
+                      />
+                    </div>
+                    <Post.Title title={`${posts.title.rendered}`} size="lg" />
+                    <div className="w-[80%]">
+                      <Post.Content
+                        text={`${posts.yoast_head_json.description}`}
+                        variant="description"
+                      />
+                    </div>
+                  </Post.Root>
+                );
+              })}
           </div>
         </section>
 
