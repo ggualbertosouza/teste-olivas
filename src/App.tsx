@@ -165,7 +165,7 @@ function App() {
         </section>
 
         {/* Contact */}
-        <section className="flex flex-col items-center justify-center gap-4 font-myriadRegular bg-background_light border border-tl-[6rem]">
+        <section className="flex flex-col items-center justify-center gap-4 font-myriadRegular bg-background_light border border-tl-[6rem] my-4">
           <Title.Root>
             <Title.Text text="Receba" coloredText=" nossas novidades" />
             <Title.Bar variant="blue" />

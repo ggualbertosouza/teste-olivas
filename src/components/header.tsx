@@ -8,7 +8,7 @@ export const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <section className="py-4 border flex flex-col lg:flex-row items-center justify-center gap-4">
+    <section className="py-4 flex flex-col lg:flex-row items-center justify-center gap-4">
       <img src={logo} alt="logo image" />
 
       {/* Navbar links, buttons */}
