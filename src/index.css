@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "myriadSemi";
+  src: local("MyriadPro-semibold"), url("./fonts/MyriadPro-semibold.ttf");
+}
+@font-face {
+  font-family: "myriadRegular";
+  src: local("MyriadPro-regular"), url("./fonts/MyriadPro-regular.ttf");
+}
+@font-face {
+  font-family: "myriadBold";
+  src: local("MyriadPro-bold"), url("./fonts/MyriadPro-bold.ttf");
+}
+
+:root {
+}
+
+.swiper {
+  padding: 2rem 4rem 2rem 4rem;
+}
