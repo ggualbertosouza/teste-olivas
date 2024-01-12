@@ -23,6 +23,10 @@ import { Form } from "@/components/form";
 function App() {
   const { data, isLoading, formatter } = usePost();
 
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <>
       <header>
@@ -60,7 +64,6 @@ function App() {
                 alt="Woman study image"
                 className="object-contain"
               />
-              {isLoading && <Loading />}
               {data?.slice(1, 2).map((posts) => {
                 return (
                   <Post.Root key={posts.id}>
@@ -80,7 +83,6 @@ function App() {
             <div className="w-1/3 flex flex-col gap-2">
               <h2 className="text-xlt_pink text-3xl py-2">Outras postagens</h2>
               <hr className="pb-2" />
-              {isLoading && <Loading />}
               {data?.slice(3, 9).map((posts: IPost) => (
                 <Post.Root key={posts.id}>
                   <Post.Title title={`${posts.title.rendered}`} />
@@ -102,7 +104,6 @@ function App() {
               <Title.Text text="Principais notícias" variant="white" />
               <Title.Bar variant="white" />
             </Title.Root>
-            {isLoading && <Loading />}
             {data?.slice(6, 9).map((posts: IPost) => (
               <Post.Root key={posts.id}>
                 <hr />
@@ -124,10 +125,9 @@ function App() {
           <div className="flex flex-col gap-6 bg-background rounded-tl-[6rem] h-[35rem] w-[50rem] p-4">
             <img src={sketch2} alt="women studying image" />
             <Dots />
-            {isLoading && <Loading />}
             {data?.slice(4, 5).map((posts) => {
               return (
-                <Post.Root>
+                <Post.Root key={posts.id}>
                   <div className="flex items-center gap-2">
                     <Post.Slug slug={posts.slug.replace(/-/g, " ")} />
                     <Post.Date
