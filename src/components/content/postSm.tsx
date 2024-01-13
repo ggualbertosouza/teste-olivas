@@ -18,7 +18,7 @@ if (load) {
         <Post.Root key={posts.id}>
           <Post.Title title={`${posts.title.rendered}`} />
           <Post.Date date={formatter.format(new Date(posts.date))} />
-          <Post.Slug slug={`${result?.name}`} />
+          <Post.Slug slug={`${result?.name[0]}`} />
           <hr />
         </Post.Root>
       ))}

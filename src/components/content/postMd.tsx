@@ -17,7 +17,7 @@ if (load) {
       {data?.slice(1, 2).map((posts) => {
         return (
           <Post.Root key={posts.id}>
-            <Post.Slug slug={`${result?.name}`} />
+            <Post.Slug slug={`${result?.name[0]}`} />
             <Post.Date date={formatter.format(new Date(posts.date))} />
             <Post.Title title={`${posts.title.rendered}`} size="xl" />
             <Post.Content

@@ -9,7 +9,7 @@ export const PostXl = () => {
     return <Loading />;
   }
 
-if (load) {
+  if (load) {
     return <Loading />;
   }
 
@@ -19,7 +19,7 @@ if (load) {
         return (
           <Post.Root key={posts.id}>
             <div className="flex items-center gap-2">
-              <Post.Slug slug={`${result?.name}`} />
+              <Post.Slug slug={`${result?.name[0]}`} />
               <Post.Date
                 date={formatter.format(new Date(posts.date))}
                 variant="blue"
