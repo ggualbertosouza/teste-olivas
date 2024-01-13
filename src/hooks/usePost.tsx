@@ -13,12 +13,13 @@ export const usePost = (number: number) => {
     },
   });
 
-  const category = UseGetCategory(number);
+  const {result, load} = UseGetCategory(number);
   const formatter = new Intl.DateTimeFormat("pt-br");
 
   return {
     data,
-    category,
+    result,
+    load,
     isLoading,
     formatter,
   };

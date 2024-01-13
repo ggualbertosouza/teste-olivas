@@ -3,18 +3,23 @@ import { Post } from "@/components/posts";
 import { usePost } from "@/hooks/usePost";
 
 export const PostXl = () => {
-  const { data, isLoading, formatter, category } = usePost(373);
+  const { data, isLoading, formatter, result, load } = usePost(373);
 
   if (isLoading) {
     return <Loading />;
   }
+
+if (load) {
+    return <Loading />;
+  }
+
   return (
     <>
       {data?.slice(4, 5).map((posts) => {
         return (
           <Post.Root key={posts.id}>
             <div className="flex items-center gap-2">
-              <Post.Slug slug={`${category}`} />
+              <Post.Slug slug={`${result?.name}`} />
               <Post.Date
                 date={formatter.format(new Date(posts.date))}
                 variant="blue"

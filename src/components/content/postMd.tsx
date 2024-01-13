@@ -3,9 +3,13 @@ import { Post } from "@/components/posts";
 import { usePost } from "@/hooks/usePost";
 
 export const PostMd = () => {
-  const { data, isLoading, category, formatter } = usePost(373);
+  const { data, isLoading, formatter, result, load } = usePost(373);
 
   if (isLoading) {
+    return <Loading />;
+  }
+
+if (load) {
     return <Loading />;
   }
   return (
@@ -13,7 +17,7 @@ export const PostMd = () => {
       {data?.slice(1, 2).map((posts) => {
         return (
           <Post.Root key={posts.id}>
-            <Post.Slug slug={`${category}`} />
+            <Post.Slug slug={`${result?.name}`} />
             <Post.Date date={formatter.format(new Date(posts.date))} />
             <Post.Title title={`${posts.title.rendered}`} size="xl" />
             <Post.Content
