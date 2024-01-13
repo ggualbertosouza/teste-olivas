@@ -1,10 +1,6 @@
-// Types
-import { IPost } from "@/types/post";
-
 // Components
 import { Header } from "@/components/header";
 import { Title } from "@/components/title";
-import { Post } from "@/components/posts";
 import { Button } from "@/components/button";
 import { Dots } from "@/components/dots";
 import { Carousel } from "@/components/carousel";

@@ -5,13 +5,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { IPost } from "@/types/post";
 import { Button } from "@/components/button";
 import { usePost } from "@/hooks/usePost";
 import { Loading } from "@/components/loading";
 
 export const Carousel = () => {
-  const { data, isLoading, formatter } = usePost();
+  const { data, isLoading } = usePost();
 
   if (isLoading) {
     return <Loading />;
