@@ -13,16 +13,14 @@ export const PostSm = () => {
 
   return (
     <>
-      {data &&
-        result &&
-        data?.slice(3, 9).map((posts) => (
-          <Post.Root key={posts.id}>
-            <Post.Title title={`${posts.title.rendered}`} />
-            <Post.Date date={formatter.format(new Date(posts.date))} />
-            <Post.Slug slug={`${result?.name}`} />
-            <hr />
-          </Post.Root>
-        ))}
+      {data?.slice(3, 9).map((posts) => (
+        <Post.Root key={posts.id}>
+          <Post.Title title={`${posts.title.rendered}`} />
+          <Post.Date date={formatter.format(new Date(posts.date))} />
+          {result && <Post.Slug slug={`${result?.name}`} />}
+          <hr />
+        </Post.Root>
+      ))}
     </>
   );
 };

@@ -14,11 +14,11 @@ export const PostXl = () => {
 
   return (
     <>
-      {data && result && data?.slice(4, 5).map((posts) => {
+      {data?.slice(4, 5).map((posts) => {
         return (
           <Post.Root key={posts.id}>
             <div className="flex items-center gap-2">
-              <Post.Slug slug={`${result?.name}`} />
+            {result && <Post.Slug slug={`${result?.name}`} />}
               <Post.Date
                 date={formatter.format(new Date(posts.date))}
                 variant="blue"

@@ -13,14 +13,14 @@ export const PostLg = () => {
 
   return (
     <>
-      {data && result && data?.slice(6, 9).map((posts) => (
+      {data?.slice(6, 9).map((posts) => (
         <Post.Root key={posts.id}>
           <hr />
           <Post.Date
             date={formatter.format(new Date(posts.date))}
             variant="white"
           />
-          <Post.Slug slug={`${result?.name}`} variant="blue" />
+          {result && <Post.Slug slug={`${result?.name}`} />}
           <Post.Title title={`${posts.title.rendered}`} variant="white" />
         </Post.Root>
       ))}
