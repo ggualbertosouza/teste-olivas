@@ -7,13 +7,14 @@ export const PostXl = () => {
   const { data, isLoading, formatter } = usePost(373);
   const { result } = UseGetCategory(373);
 
+
   if (isLoading) {
     return <Loading />;
   }
 
   return (
     <>
-      {data?.slice(4, 5).map((posts) => {
+      {data && result && data?.slice(4, 5).map((posts) => {
         return (
           <Post.Root key={posts.id}>
             <div className="flex items-center gap-2">

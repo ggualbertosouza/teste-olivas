@@ -12,7 +12,7 @@ export const PostMd = () => {
   }
   return (
     <>
-      {data?.slice(1, 2).map((posts) => {
+      {data && result && data?.slice(1, 2).map((posts) => {
         return (
           <Post.Root key={posts.id}>
             <Post.Slug slug={`${result?.name}`} />

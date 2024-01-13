@@ -13,7 +13,7 @@ export const PostLg = () => {
 
   return (
     <>
-      {data?.slice(6, 9).map((posts) => (
+      {data && result && data?.slice(6, 9).map((posts) => (
         <Post.Root key={posts.id}>
           <hr />
           <Post.Date
