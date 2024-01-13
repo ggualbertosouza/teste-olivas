@@ -113,7 +113,7 @@ function App() {
         <section className="space-y-4 py-12">
           <Title.Root>
             <Title.Text text="Cases" />
-            <Title.Bar variant="blue" />
+            <Title.Bar variant="blue" size="sm" />
           </Title.Root>
 
           {/* Carousel */}

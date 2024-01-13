@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils";
 import { type VariantProps, cva } from "class-variance-authority";
 
-const titleVariants = cva("text-4xl font-myriadBold", {
+const titleVariants = cva("text-4xl font-myriadBold text-center", {
   variants: {
     variant: {
-      white: "text-background self-start",
+      white: "text-background text-start",
       blue: "text-primary",
     },
   },
