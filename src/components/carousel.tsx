@@ -10,7 +10,7 @@ import { usePost } from "@/hooks/usePost";
 import { Loading } from "@/components/loading";
 
 export const Carousel = () => {
-  const { data, isLoading } = usePost();
+  const { data, isLoading } = usePost(403);
 
   if (isLoading) {
     return <Loading />;

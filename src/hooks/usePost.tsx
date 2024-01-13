@@ -1,19 +1,24 @@
+import { UseGetCategory } from "@/hooks/useGetCategory";
 import { api } from "@/lib/api";
 import { IPost } from "@/types/post";
 import { useQuery } from "react-query";
 
-export const usePost = () => {
+export const usePost = (number: number) => {
   const { data, isLoading } = useQuery<IPost[]>({
     queryKey: "posts",
     queryFn: () => {
-      return api.get("posts?categories=373").then((response) => response.data);
+      return api
+        .get(`posts?categories=${number}`)
+        .then((response) => response.data);
     },
   });
 
+  const category = UseGetCategory(number);
   const formatter = new Intl.DateTimeFormat("pt-br");
 
   return {
     data,
+    category,
     isLoading,
     formatter,
   };

@@ -3,7 +3,7 @@ import { Post } from "@/components/posts";
 import { usePost } from "@/hooks/usePost";
 
 export const PostSm = () => {
-  const { data, isLoading, formatter } = usePost();
+  const { data, isLoading, formatter, category } = usePost(373);
 
   if (isLoading) {
     return <Loading />;
@@ -14,7 +14,7 @@ export const PostSm = () => {
         <Post.Root key={posts.id}>
           <Post.Title title={`${posts.title.rendered}`} />
           <Post.Date date={formatter.format(new Date(posts.date))} />
-          <Post.Slug slug={`${posts.slug.replace(/-/g, " ")}`} />
+          <Post.Slug slug={category} />
           <hr />
         </Post.Root>
       ))}
