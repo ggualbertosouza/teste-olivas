@@ -77,7 +77,7 @@ function App() {
           <img
             src={object2}
             alt="Object image"
-            className="absolute -bottom-[44%] -left-[30%] hidden lg:block"
+            className="absolute -bottom-[44%] -left-[30%] hidden lg:block z-[50]"
           />
         </section>
 

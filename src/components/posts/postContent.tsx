@@ -4,7 +4,7 @@ import { type VariantProps, cva } from "class-variance-authority";
 const contentVariant = cva("text-sm overflow-hidden text-grey_light", {
   variants: {
     variant: {
-      default: " italic text-ellipsis h-24 line-clamp-5 leading-6",
+      default: " italic text-ellipsis  line-clamp-5 leading-6",
       description: "myriadRegular ",
     },
   },

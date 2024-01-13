@@ -13,7 +13,11 @@ export const Carousel = () => {
   const { data, isLoading } = usePost(403);
 
   if (isLoading) {
-    return <Loading />;
+    return (
+      <div className="flex items-center justify-center">
+        <Loading />
+      </div>
+    );
   }
 
   return (
