@@ -1,15 +1,13 @@
 import { Loading } from "@/components/loading";
 import { Post } from "@/components/posts";
+import { UseGetCategory } from "@/hooks/useGetCategory";
 import { usePost } from "@/hooks/usePost";
 
 export const PostXl = () => {
-  const { data, isLoading, formatter, result, load } = usePost(373);
+  const { data, isLoading, formatter } = usePost(373);
+  const { result } = UseGetCategory(373);
 
   if (isLoading) {
-    return <Loading />;
-  }
-
-  if (load) {
     return <Loading />;
   }
 
@@ -19,7 +17,7 @@ export const PostXl = () => {
         return (
           <Post.Root key={posts.id}>
             <div className="flex items-center gap-2">
-              <Post.Slug slug={`${result?.name[0]}`} />
+              <Post.Slug slug={`${result?.name}`} />
               <Post.Date
                 date={formatter.format(new Date(posts.date))}
                 variant="blue"

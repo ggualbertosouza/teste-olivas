@@ -1,17 +1,16 @@
 import { Loading } from "@/components/loading";
 import { Post } from "@/components/posts";
+import { UseGetCategory } from "@/hooks/useGetCategory";
 import { usePost } from "@/hooks/usePost";
 
 export const PostLg = () => {
-  const { data, isLoading, formatter, result, load } = usePost(373);
+  const { data, isLoading, formatter } = usePost(373);
+  const { result } = UseGetCategory(373);
 
   if (isLoading) {
     return <Loading />;
   }
 
-  if (load) {
-    return <Loading />;
-  }
   return (
     <>
       {data?.slice(6, 9).map((posts) => (
@@ -21,7 +20,7 @@ export const PostLg = () => {
             date={formatter.format(new Date(posts.date))}
             variant="white"
           />
-          <Post.Slug slug={`${result?.name[0]}`} variant="blue" />
+          <Post.Slug slug={`${result?.name}`} variant="blue" />
           <Post.Title title={`${posts.title.rendered}`} variant="white" />
         </Post.Root>
       ))}

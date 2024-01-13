@@ -1,6 +1,7 @@
 export interface IPost {
   id: number;
   date: Date;
+  categories: number[]
   title: {
     rendered: string;
   };

@@ -1,4 +1,3 @@
-import { UseGetCategory } from "@/hooks/useGetCategory";
 import { api } from "@/lib/api";
 import { IPost } from "@/types/post";
 import { useQuery } from "react-query";
@@ -13,13 +12,10 @@ export const usePost = (number: number) => {
     },
   });
 
-  const {result, load} = UseGetCategory(number);
   const formatter = new Intl.DateTimeFormat("pt-br");
 
   return {
     data,
-    result,
-    load,
     isLoading,
     formatter,
   };
