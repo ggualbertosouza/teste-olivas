@@ -29,12 +29,12 @@ function App() {
 
       <main className="flex flex-col gap-12 font-myriadSemi overflow-hidden">
         {/* Banner */}
-        <section className="relative h-[25.75] w-full">
-          <img src={banner} alt="banner image" />
+        <section className="relative h-[10rem] lg:h-[25rem] w-full">
+          <img src={banner} alt="banner image" className="h-full w-full object-cover"/>
           <img
             src={circle}
             alt="circle image"
-            className="absolute aspect-square w-[20%] right-0 -bottom-[50%]"
+            className="absolute aspect-square w-[20%] right-0 -bottom-[30%] lg:-bottom-[50%]"
           />
         </section>
 
