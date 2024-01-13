@@ -102,7 +102,7 @@ function App() {
           </div>
 
           {/* Bloco 2 */}
-          <div className="flex flex-col gap-6 bg-background rounded-tl-[6rem] lg:h-[35rem] w-full lg:w-[50rem] p-4">
+          <div className="flex flex-col gap-6 bg-background rounded-tl-[6rem] lg:h-[35rem] w-full lg:w-[50rem] p-4 overflow-hidden">
             <img src={sketch2} alt="women studying image" />
             <Dots />
             <PostXl />
@@ -132,7 +132,7 @@ function App() {
           <img
             src={object1}
             alt="Object image"
-            className="absolute -left-64 lg:-left-4 -top-4 lg:top-7"
+            className="absolute -left-72 lg:-left-4 -top-4 lg:top-7"
           />
           <Title.Root>
             <Title.Text text="Receba" coloredText=" nossas novidades" />
@@ -153,7 +153,7 @@ function App() {
 
       {/* Footer */}
       <footer className="bg-[#022776] flex flex-col lg:flex-row items-center justify-between py-4 px-12 text-[#4B8AA4] font-myriadSemi">
-        <p>
+        <p className="text-center">
           copyright 2022 - Todos os direitos reservados | Política de
           privacidade | Condições gerais
         </p>

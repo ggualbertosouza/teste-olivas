@@ -46,7 +46,7 @@ export const Form = () => {
       </div>
 
       <div className="flex  flex-col items-center justify-center">
-        <div className="flex flex-col-reverse lg:flex-row gap-1 text-grey_light">
+        <div className="flex flex-col-reverse lg:flex-row gap-1 items-center text-grey_light">
           <input {...register("check")} type="checkbox" />
           <p className="text-center">
             Ao informar meus dados, eu concordo com a Política de Privacidade e
