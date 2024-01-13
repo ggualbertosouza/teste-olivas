@@ -38,10 +38,15 @@ export default {
         "0%": { transform: "translateX(0%)" },
         "100%": { transform: "translateX(-100%)" },
       },
+      spin: {
+        "0%": { transform: "rotate(0deg)" },
+        "100%": { transform: "rotate(360deg)" },
+      },
     },
     animation: {
       "open-menu": "open-menu 0.3s",
       "close-menu": "close-menu 0.3s",
+      spin: "spin 1s linear infinite;",
     },
   },
   plugins: [],

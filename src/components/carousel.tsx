@@ -7,12 +7,16 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { IPost } from "@/types/post";
 import { Button } from "@/components/button";
+import { usePost } from "@/hooks/usePost";
+import { Loading } from "@/components/loading";
 
-interface carouselProps {
-  post: IPost[];
-}
+export const Carousel = () => {
+  const { data, isLoading, formatter } = usePost();
 
-export const Carousel = ({ post }: carouselProps) => {
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <>
       <Swiper
@@ -25,7 +29,7 @@ export const Carousel = ({ post }: carouselProps) => {
           1024: { slidesPerView: 3 },
         }}
       >
-        {post.map((item) => {
+        {data?.map((item) => {
           return (
             <SwiperSlide
               className="py-4 flex flex-col justify-between cursor-pointer lg:w-[25rem] lg:h-[25rem]"

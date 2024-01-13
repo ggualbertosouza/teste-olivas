@@ -5,13 +5,9 @@ import { IPost } from "@/types/post";
 import { Header } from "@/components/header";
 import { Title } from "@/components/title";
 import { Post } from "@/components/posts";
-import { Loading } from "@/components/loading";
 import { Button } from "@/components/button";
 import { Dots } from "@/components/dots";
 import { Carousel } from "@/components/carousel";
-
-// hooks
-import { usePost } from "@/hooks/usePost";
 
 // Images
 import banner from "@/images/banner.png";
@@ -19,10 +15,12 @@ import circle from "@/images/circle.png";
 import sketch1 from "@/images/sketch1.png";
 import sketch2 from "@/images/sketch2.png";
 import { Form } from "@/components/form";
+import { PostSm } from "@/components/content/postSm";
+import { PostMd } from "@/components/content/postMd";
+import { PostLg } from "@/components/content/postLg";
+import { PostXl } from "@/components/content/postXl";
 
 function App() {
-  const { data, isLoading, formatter } = usePost();
-
   return (
     <>
       <header>
@@ -60,39 +58,14 @@ function App() {
                 alt="Woman study image"
                 className="object-contain"
               />
-              {isLoading && <Loading />}
-              {data &&
-                data?.slice(1, 2).map((posts) => {
-                  return (
-                    <Post.Root key={posts.id}>
-                      <Post.Slug slug={`${posts.slug.replace(/-/g, " ")}`} />
-                      <Post.Date
-                        date={formatter.format(new Date(posts.date))}
-                      />
-                      <Post.Title title={`${posts.title.rendered}`} size="xl" />
-                      <Post.Content
-                        text={`${posts.content.rendered}`}
-                        variant="default"
-                      />
-                    </Post.Root>
-                  );
-                })}
+              <PostMd />
             </div>
 
             {/* Articles */}
             <div className="w-1/3 flex flex-col gap-2">
               <h2 className="text-xlt_pink text-3xl py-2">Outras postagens</h2>
               <hr className="pb-2" />
-              {isLoading && <Loading />}
-              {data &&
-                data?.slice(3, 9).map((posts: IPost) => (
-                  <Post.Root key={posts.id}>
-                    <Post.Title title={`${posts.title.rendered}`} />
-                    <Post.Date date={formatter.format(new Date(posts.date))} />
-                    <Post.Slug slug={`${posts.slug.replace(/-/g, " ")}`} />
-                    <hr />
-                  </Post.Root>
-                ))}
+              <PostSm />
               <Button variant="secondary">Ver mais</Button>
             </div>
           </div>
@@ -106,25 +79,7 @@ function App() {
               <Title.Text text="Principais notícias" variant="white" />
               <Title.Bar variant="white" />
             </Title.Root>
-            {isLoading && <Loading />}
-            {data &&
-              data?.slice(6, 9).map((posts: IPost) => (
-                <Post.Root key={posts.id}>
-                  <hr />
-                  <Post.Date
-                    date={formatter.format(new Date(posts.date))}
-                    variant="white"
-                  />
-                  <Post.Slug
-                    slug={`${posts.slug.replace(/-/g, " ")}`}
-                    variant="blue"
-                  />
-                  <Post.Title
-                    title={`${posts.title.rendered}`}
-                    variant="white"
-                  />
-                </Post.Root>
-              ))}
+            <PostLg />
             <Button variant="white">Ver mais</Button>
           </div>
 
@@ -132,28 +87,7 @@ function App() {
           <div className="flex flex-col gap-6 bg-background rounded-tl-[6rem] h-[35rem] w-[50rem] p-4">
             <img src={sketch2} alt="women studying image" />
             <Dots />
-            {isLoading && <Loading />}
-            {data &&
-              data?.slice(4, 5).map((posts) => {
-                return (
-                  <Post.Root key={posts.id}>
-                    <div className="flex items-center gap-2">
-                      <Post.Slug slug={posts.slug.replace(/-/g, " ")} />
-                      <Post.Date
-                        date={formatter.format(new Date(posts.date))}
-                        variant="blue"
-                      />
-                    </div>
-                    <Post.Title title={`${posts.title.rendered}`} size="lg" />
-                    <div className="w-[80%]">
-                      <Post.Content
-                        text={`${posts.yoast_head_json.description}`}
-                        variant="description"
-                      />
-                    </div>
-                  </Post.Root>
-                );
-              })}
+            <PostXl />
           </div>
         </section>
 
@@ -166,8 +100,7 @@ function App() {
 
           {/* Carousel */}
           <div className="py-4">
-            {isLoading && <Loading />}
-            <Carousel post={data!} />
+            <Carousel />
           </div>
           <div className="flex itemscenter justify-center">
             <Button variant="secondary">Ver mais</Button>
