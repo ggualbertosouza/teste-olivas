@@ -77,7 +77,7 @@ function App() {
           <img
             src={object2}
             alt="Object image"
-            className="absolute -bottom-[44%] -left-[30%]"
+            className="absolute -bottom-[44%] -left-[30%] hidden lg:block"
           />
         </section>
 
@@ -86,7 +86,7 @@ function App() {
           <img
             src={object3}
             alt="Object image"
-            className="absolute -bottom-32 left-0"
+            className="absolute -bottom-32 -left-20 lg:-left-7"
           />
 
           {/* Bloco 1 */}
