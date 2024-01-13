@@ -1,5 +1,5 @@
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 export const Loading = () => {
-  return <AiOutlineLoading3Quarters className="w-4 h-4 animate-spin" />;
+  return <AiOutlineLoading3Quarters className="w-8 h-8 animate-spin" />;
 };
