@@ -46,7 +46,7 @@ export const Carousel = () => {
                 dangerouslySetInnerHTML={{ __html: item.content.rendered }}
                 className="h-[8%] lg:h-[20%] leading-6 overflow-hidden font-myriadRegular text-ellipsis text-sm line-clamp-5 text-grey_light lg:w-[25rem]"
               />
-              <Button variant="pink">
+              <Button variant="pink" size="default">
                 <a href={item.og_url}>Saiba mais</a>
               </Button>
             </SwiperSlide>

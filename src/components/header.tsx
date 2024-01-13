@@ -15,8 +15,8 @@ export const Header = () => {
       <nav
         className={`flex flex-col lg:flex-row gap-4 ${
           open
-            ? " animate-open-menu transition-all duration-500"
-            : "h-0 animate-open-menu transition-all duration-500"
+            ? "animate-open-menu transition-all duration-500"
+            : "animate-close-menu transition-all duration-500 h-0 hidden"
         }`}
       >
         <div className="flex flex-col items-center lg:flex-row gap-4 font-myriadRegular">
@@ -37,8 +37,8 @@ export const Header = () => {
           </a>
         </div>
 
-        <div className="flex gap-2">
-          <Button>
+        <div className="flex items-center gap-2">
+          <Button variant="primary" className="px-4 py-2">
             <FaRegEnvelope />
             Fale com especialista
           </Button>

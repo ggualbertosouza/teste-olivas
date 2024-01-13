@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { type VariantProps, cva } from "class-variance-authority";
 
 const slugVariant = cva(
-  "px-2 py-0.5 flex items-center justify-center text-background w-fit rounded-full",
+  "px-3 py-1 text-sm lg:text-[16px] flex items-center justify-center text-background w-fit rounded-full",
   {
     variants: {
       variant: {

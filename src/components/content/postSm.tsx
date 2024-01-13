@@ -8,7 +8,6 @@ export const PostSm = () => {
   if (isLoading) {
     return <Loading />;
   }
-
   return (
     <>
       {data?.slice(3, 9).map((posts) => (
