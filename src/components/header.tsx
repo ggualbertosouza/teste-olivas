@@ -15,8 +15,8 @@ export const Header = () => {
       <nav
         className={`flex flex-col lg:flex-row gap-4 ${
           open
-            ? "animate-open-menu transition-all duration-500"
-            : "animate-close-menu transition-all duration-500 h-0 hidden"
+            ? "animate-open-menu transition-all duration-500 flex"
+            : "animate-close-menu transition-all duration-500 h-0 hidden lg:flex"
         }`}
       >
         <div className="flex flex-col items-center lg:flex-row gap-4 font-myriadRegular">
@@ -51,13 +51,13 @@ export const Header = () => {
 
       {/* Mobile menu button */}
       <button
-        className="lg:hidden flex absolute right-10 top-10"
+        className="lg:hidden flex absolute right-4 top-9"
         onClick={() => setOpen(!open)}
       >
         {open ? (
-          <IoClose className="w-6 h-6" />
+          <IoClose className="w-7 h-7" />
         ) : (
-          <IoMenu className="w-6 h-6" />
+          <IoMenu className="w-7 h-7" />
         )}
       </button>
     </section>

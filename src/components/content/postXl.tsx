@@ -14,7 +14,7 @@ export const PostXl = () => {
         return (
           <Post.Root key={posts.id}>
             <div className="flex items-center gap-2">
-              <Post.Slug slug={category} />
+              <Post.Slug slug={`${category}`} />
               <Post.Date
                 date={formatter.format(new Date(posts.date))}
                 variant="blue"

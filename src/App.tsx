@@ -49,7 +49,7 @@ function App() {
         </Title.Root>
 
         {/* Contents */}
-        <section className="relative flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 py-20 px-12 ">
+        <section className="relative flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 py-20 px-12">
           {/* Image | Post */}
           <div className="bg-background_light relative w-full lg:w-2/4 lg:h-[30vh] p-4">
             <img

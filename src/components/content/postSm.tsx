@@ -14,7 +14,7 @@ export const PostSm = () => {
         <Post.Root key={posts.id}>
           <Post.Title title={`${posts.title.rendered}`} />
           <Post.Date date={formatter.format(new Date(posts.date))} />
-          <Post.Slug slug={category} />
+          <Post.Slug slug={`${category}`} />
           <hr />
         </Post.Root>
       ))}
