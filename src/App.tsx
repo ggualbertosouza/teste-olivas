@@ -30,7 +30,11 @@ function App() {
       <main className="flex flex-col gap-12 font-myriadSemi overflow-hidden">
         {/* Banner */}
         <section className="relative h-[10rem] lg:h-[25rem] w-full">
-          <img src={banner} alt="banner image" className="h-full w-full object-cover"/>
+          <img
+            src={banner}
+            alt="banner image"
+            className="h-full w-full object-cover"
+          />
           <img
             src={circle}
             alt="circle image"
@@ -77,7 +81,7 @@ function App() {
           <img
             src={object2}
             alt="Object image"
-            className="absolute -bottom-[44%] -left-[30%] hidden lg:block z-[50]"
+            className="absolute -bottom-[44%] -left-[50%] 2xl:-left-[30%] hidden xl:block z-[50]"
           />
         </section>
 

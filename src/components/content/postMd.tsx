@@ -18,7 +18,7 @@ export const PostMd = () => {
       {data?.slice(1, 2).map((posts) => {
         return (
           <Post.Root key={posts.id}>
-            <Post.Slug slug={`Blog`} />
+            <Post.Slug slug={`Customer experience`} />
             <Post.Date date={formatter.format(new Date(posts.date))} />
             <Post.Title title={`${posts.title.rendered}`} size="xl" />
             <Post.Content
