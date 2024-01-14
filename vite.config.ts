@@ -10,7 +10,7 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      "/post": "https://www.olivas.digital/wp-json/wp/v2",
+      "/post": "http://localhost:5173",
     },
   },
 });

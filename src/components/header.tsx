@@ -8,12 +8,12 @@ export const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <section className="py-4 flex flex-col lg:flex-row items-center justify-center gap-4">
+    <section className="py-4 flex flex-col lg:flex-row items-center justify-center gap-12">
       <img src={logo} alt="logo image" />
 
       {/* Navbar links, buttons */}
       <nav
-        className={`flex flex-col lg:flex-row gap-4 ${
+        className={`flex flex-col lg:flex-row gap-12 ${
           open
             ? "animate-open-menu transition-all duration-500 flex"
             : "animate-close-menu transition-all duration-500 h-0 hidden lg:flex"
