@@ -1,4 +1,3 @@
-import { api } from "@/lib/api";
 import { IPost } from "@/types/post";
 import { useQuery } from "react-query";
 
