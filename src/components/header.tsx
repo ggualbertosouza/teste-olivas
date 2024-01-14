@@ -19,7 +19,7 @@ export const Header = () => {
             : "animate-close-menu transition-all duration-500 h-0 hidden lg:flex"
         }`}
       >
-        <div className="flex flex-col items-center lg:flex-row gap-4 font-myriadRegular">
+        <div className="flex flex-col items-center lg:flex-row gap-4 font-myriadRegular text-center">
           <a href="#" className=" text-grey_light hover:text-grey">
             Quem somos
           </a>
@@ -38,10 +38,11 @@ export const Header = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          <Button variant="primary" className="px-4 py-2">
+          <Button variant="primary" className="px-4 py-2 text-nowrap text-sm">
             <FaRegEnvelope />
             Fale com especialista
           </Button>
+
           {/* Search bar */}
           <button className="bg-[#E5E5E5] rounded-full p-2 hidden lg:flex">
             <FaSearch className="text-primary_text" />

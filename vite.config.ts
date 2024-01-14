@@ -8,4 +8,10 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
   },
+  server: {
+    cors: false,
+    proxy: {
+      "/post": "https://www.olivas.digital/wp-json/wp/v2",
+    },
+  },
 });
