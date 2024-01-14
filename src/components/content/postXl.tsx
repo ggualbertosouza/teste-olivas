@@ -15,7 +15,7 @@ export const PostXl = () => {
 
   return (
     <>
-      {data?.slice(4, 5).map((posts) => {
+      {data?.slice(6, 7).map((posts) => {
         return (
           <Post.Root key={posts.id}>
             <div className="flex items-center gap-2">
