@@ -13,7 +13,7 @@ export const Header = () => {
 
       {/* Navbar links, buttons */}
       <nav
-        className={`flex flex-col lg:flex-row gap-12 ${
+        className={`flex flex-col lg:flex-row gap-4 lg:gap-12 ${
           open
             ? "animate-open-menu transition-all duration-500 flex"
             : "animate-close-menu transition-all duration-500 h-0 hidden lg:flex"

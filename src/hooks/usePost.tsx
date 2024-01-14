@@ -6,9 +6,9 @@ export const usePost = (number: number) => {
   const { data, isLoading } = useQuery<IPost[]>({
     queryKey: "posts",
     queryFn: async () => {
-      return await api
-        .get(`posts?categories=${number}`)
-        .then((response) => response.data);
+      return await fetch(`posts?categories=${number}`).then((response) =>
+        response.json(),
+      );
     },
   });
 
