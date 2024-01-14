@@ -5,9 +5,10 @@ export const usePost = (number: number) => {
   const { data, isLoading } = useQuery<IPost[]>({
     queryKey: "posts",
     queryFn: async () => {
-      return await fetch(`posts?categories=${number}`).then((response) =>
-        response.json(),
-      );
+      return await fetch(
+        `https://www.olivas.digital/wp-json/wp/v2/posts?categories=${number}`,
+        { mode: "cors" },
+      ).then((response) => response.json());
     },
   });
 
