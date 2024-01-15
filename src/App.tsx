@@ -107,10 +107,12 @@ function App() {
 
             {/* Bloco 1 */}
             <div className="space-y-12 w-full lg:w-1/3">
+              <div className="p-2 ">
               <Title.Root>
                 <Title.Text text="Principais notícias" variant="white" />
-                <Title.Bar variant="white" />
+                <Title.Bar variant="white"  />
               </Title.Root>
+              </div>
 
               <PostLg />
 
