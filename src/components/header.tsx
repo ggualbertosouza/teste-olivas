@@ -20,6 +20,7 @@ export const Header = () => {
   return (
     <>
       <section className="border-b border-b-[#707070]/40 px-12 py-1 text-[#006999] flex items-center justify-end relative">
+        {/* Languages */}
         <button
           onClick={() => setDrop(!drop)}
           className="flex items-center gap-1 text-sm hover:bg-black/10 p-1 rounded-md"
@@ -29,21 +30,37 @@ export const Header = () => {
           <FaChevronDown />
         </button>
         <div
-          className={`absolute top-10 bg-black/10 px-3 py-1 rounded-md ${
-            drop ? "block" : "hidden"
+          className={`absolute top-10 bg-white/80 px-3 py-1 rounded-md ${
+            drop ? "block z-20" : "hidden"
           }`}
         >
           <ul className="flex flex-col gap-1 text-sm text-center">
             {languages.map((item) => (
-              <li className="hover:bg-black/10 rounded-md">
-                <button>{item}</button>
+              <li>
+                <button className="px-1 hover:bg-black/10 rounded-md w-full">
+                  {item}
+                </button>
               </li>
             ))}
           </ul>
         </div>
       </section>
+
       <section className="py-4 flex flex-col lg:flex-row items-center justify-center gap-12">
-        <img src={logo} alt="logo image" />
+        <div className="flex items-center justify-center relative w-full">
+          <img src={logo} alt="logo image" />
+          {/* Mobile menu button */}
+          <button
+            className="lg:hidden flex absolute right-4 "
+            onClick={() => setOpen(!open)}
+          >
+            {open ? (
+              <IoClose className="w-7 h-7" />
+            ) : (
+              <IoMenu className="w-7 h-7" />
+            )}
+          </button>
+        </div>
 
         {/* Navbar links, buttons */}
         <nav
@@ -83,18 +100,6 @@ export const Header = () => {
             </button>
           </div>
         </nav>
-
-        {/* Mobile menu button */}
-        <button
-          className="lg:hidden flex absolute right-4 top-16"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? (
-            <IoClose className="w-7 h-7" />
-          ) : (
-            <IoMenu className="w-7 h-7" />
-          )}
-        </button>
       </section>
     </>
   );
