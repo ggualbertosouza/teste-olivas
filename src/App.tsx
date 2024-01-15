@@ -45,12 +45,15 @@ function App() {
 
         {/* Section title */}
         <Title.Root>
+          <div className="flex flex-col items-center gap-12">
           <Title.Text
             variant="blue"
+            size='xl'
             text="Conteúdos"
             coloredText=" para você"
           />
           <Title.Bar variant="blue" />
+          </div>
         </Title.Root>
 
         {/* Contents */}
@@ -99,11 +102,14 @@ function App() {
 
             {/* Bloco 1 */}
             <div className="space-y-12 w-full lg:w-1/3">
+
               <Title.Root>
                 <Title.Text text="Principais notícias" variant="white" />
                 <Title.Bar variant="white" />
               </Title.Root>
+
               <PostLg />
+
               <Button variant="white" size="lg">
                 Ver mais
               </Button>

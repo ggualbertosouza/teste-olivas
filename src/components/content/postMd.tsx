@@ -12,7 +12,7 @@ export const PostMd = () => {
       </div>
     );
   }
-  
+
   return (
     <>
       {data?.slice(1, 2).map((posts) => {

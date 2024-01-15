@@ -22,7 +22,7 @@ export const PostLg = () => {
             date={formatter.format(new Date(item.date))}
             variant="white"
           />
-          <Post.Slug slug={`Customer experience`} />
+          <Post.Slug slug={`Customer experience`} variant="blue" />
           <Post.Title title={`${item.title.rendered}`} variant="white" />
         </Post.Root>
       ))}

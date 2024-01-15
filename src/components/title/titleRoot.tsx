@@ -6,7 +6,7 @@ interface IRoot {
 
 export const titleRoot = ({ children }: IRoot) => {
   return (
-    <div className="flex flex-col gap-4 items-center justify-center">
+    <div className="flex flex-col gap-6 items-center justify-center">
       {children}
     </div>
   );

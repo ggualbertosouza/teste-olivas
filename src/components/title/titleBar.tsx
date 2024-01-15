@@ -9,7 +9,7 @@ const barVariant = cva("h-2 rounded-full", {
     },
     size: {
       sm: "w-[3rem]",
-      md: "w-[7rem]",
+      md: "w-[7rem] h-2",
     },
   },
   defaultVariants: {
