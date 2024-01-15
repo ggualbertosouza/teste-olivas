@@ -160,7 +160,7 @@ function App() {
             <img
               src={object1}
               alt="Object image"
-              className="absolute -left-72 lg:-left-4 -top-4 lg:top-7"
+              className="absolute -left-72 lg:-left-4 -top-4 lg:top-7 z-10"
             />
             <Title.Root>
               <Title.Text text="Receba" coloredText=" nossas novidades" />
