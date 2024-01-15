@@ -2,9 +2,15 @@
 
 Desenvolver interface gráfica proposta no desafio do projeto.
 
+### Acesse 
+
+https://teste-olivas-topaz.vercel.app
+
 ### Principais features:
   - Requisição de API - Axios
   - Validação de formulário
+  - Animações de entrada no carregamento de alguns componentes
+  - Loading nos componentes que fazem requisição a uma API
   - Pattern
       - Compound - pattern de composição
   - SOLID
