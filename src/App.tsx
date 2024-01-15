@@ -77,7 +77,9 @@ function App() {
               <hr className="pb-2 border-[#707070]/25" />
               <PostSm />
               <Button variant="secondary" size="lg">
-                Ver mais
+                <a href="https://www.olivas.digital/blog/" target="_blank">
+                  Ver mais
+                </a>
               </Button>
             </div>
 
@@ -113,7 +115,9 @@ function App() {
               <PostLg />
 
               <Button variant="white" size="lg">
-                Ver mais
+                <a href="https://www.olivas.digital/blog/" target="_blank">
+                  Ver mais
+                </a>
               </Button>
             </div>
 
@@ -140,7 +144,9 @@ function App() {
             </div>
             <div className="flex itemscenter justify-center">
               <Button variant="secondary" size="lg">
-                Ver mais
+                <a href="https://www.olivas.digital/blog/" target="_blank">
+                  Ver mais
+                </a>
               </Button>
             </div>
           </section>
