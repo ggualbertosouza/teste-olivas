@@ -4,15 +4,15 @@
 
 @font-face {
   font-family: "myriadSemi";
-  src: local("MyriadPro-semibold"), url("./fonts/MyriadPro-semibold.ttf");
+  src: local("MyriadPro-semibold"), url("./assets/fonts/MyriadPro-semibold.ttf");
 }
 @font-face {
   font-family: "myriadRegular";
-  src: local("MyriadPro-regular"), url("./fonts/MyriadPro-regular.ttf");
+  src: local("MyriadPro-regular"), url("./assets/fonts/MyriadPro-regular.ttf");
 }
 @font-face {
   font-family: "myriadBold";
-  src: local("MyriadPro-bold"), url("./fonts/MyriadPro-bold.ttf");
+  src: local("MyriadPro-bold"), url("./assets/fonts/MyriadPro-bold.ttf");
 }
 
 :root {

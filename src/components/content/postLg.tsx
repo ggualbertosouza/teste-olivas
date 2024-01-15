@@ -16,15 +16,17 @@ export const PostLg = () => {
   return (
     <>
       {data?.slice(6, 9).map((item) => (
-        <Post.Root key={item.id}>
-          <hr />
-          <Post.Date
-            date={formatter.format(new Date(item.date))}
-            variant="white"
-          />
-          <Post.Slug slug={`Customer experience`} variant="blue" />
-          <Post.Title title={`${item.title.rendered}`} variant="white" />
-        </Post.Root>
+        <a href={item.link} key={item.id}>
+          <Post.Root>
+            <hr />
+            <Post.Date
+              date={formatter.format(new Date(item.date))}
+              variant="white"
+            />
+            <Post.Slug slug={`Customer experience`} variant="blue" />
+            <Post.Title title={`${item.title.rendered}`} variant="white" />
+          </Post.Root>
+        </a>
       ))}
     </>
   );

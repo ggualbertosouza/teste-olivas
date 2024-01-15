@@ -16,12 +16,14 @@ export const PostSm = () => {
   return (
     <>
       {data?.slice(3, 9).map((posts) => (
-        <Post.Root key={posts.id}>
-          <Post.Title title={`${posts.title.rendered}`} />
-          <Post.Date date={formatter.format(new Date(posts.date))} />
-          <Post.Slug slug={`Customer experience`} />
-          <hr />
-        </Post.Root>
+        <a href={posts.link} key={posts.id}>
+          <Post.Root>
+            <Post.Title title={`${posts.title.rendered}`} />
+            <Post.Date date={formatter.format(new Date(posts.date))} />
+            <Post.Slug slug={`Customer experience`} />
+            <hr className="border-[#707070]/25" />
+          </Post.Root>
+        </a>
       ))}
     </>
   );

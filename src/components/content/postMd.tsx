@@ -17,7 +17,8 @@ export const PostMd = () => {
     <>
       {data?.slice(1, 2).map((posts) => {
         return (
-          <Post.Root key={posts.id}>
+          <a href={posts.link} key={posts.id}>
+          <Post.Root >
             <Post.Slug slug={`Customer experience`} />
             <Post.Date date={formatter.format(new Date(posts.date))} />
             <Post.Title title={`${posts.title.rendered}`} size="xl" />
@@ -26,6 +27,7 @@ export const PostMd = () => {
               variant="default"
             />
           </Post.Root>
+          </a>
         );
       })}
     </>

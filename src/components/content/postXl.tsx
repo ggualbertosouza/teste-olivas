@@ -17,22 +17,24 @@ export const PostXl = () => {
     <>
       {data?.slice(6, 7).map((posts) => {
         return (
-          <Post.Root key={posts.id}>
-            <div className="flex items-center gap-2">
-              <Post.Slug slug={`Customer experience`} />
-              <Post.Date
-                date={formatter.format(new Date(posts.date))}
-                variant="blue"
-              />
-            </div>
-            <Post.Title title={`${posts.title.rendered}`} size="lg" />
-            <div className="w-[80%]">
-              <Post.Content
-                text={`${posts.yoast_head_json.description}`}
-                variant="description"
-              />
-            </div>
-          </Post.Root>
+          <a href={posts.link} key={posts.id}>
+            <Post.Root>
+              <div className="flex items-center gap-2">
+                <Post.Slug slug={`Customer experience`} />
+                <Post.Date
+                  date={formatter.format(new Date(posts.date))}
+                  variant="blue"
+                />
+              </div>
+              <Post.Title title={`${posts.title.rendered}`} size="lg" />
+              <div className="w-[80%]">
+                <Post.Content
+                  text={`${posts.yoast_head_json.description}`}
+                  variant="description"
+                />
+              </div>
+            </Post.Root>
+          </a>
         );
       })}
     </>

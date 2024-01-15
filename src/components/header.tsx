@@ -5,7 +5,7 @@ import { Button } from "@/components/button";
 import { useState } from "react";
 
 // Icons | images
-import logo from "@/images/logo.png";
+import logo from "@/assets/images/logo.png";
 import { FaRegEnvelope, FaSearch } from "react-icons/fa";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { GiWorld } from "react-icons/gi";
@@ -36,7 +36,7 @@ export const Header = () => {
         >
           <ul className="flex flex-col gap-1 text-sm text-center">
             {languages.map((item) => (
-              <li>
+              <li key={item}>
                 <button className="px-1 hover:bg-black/10 rounded-md w-full">
                   {item}
                 </button>
@@ -47,7 +47,7 @@ export const Header = () => {
       </section>
 
       <section className="py-4 flex flex-col lg:flex-row items-center justify-center gap-12">
-        <div className="flex items-center justify-center relative w-full">
+        <div className="flex items-center justify-center relative w-full lg:w-fit">
           <img src={logo} alt="logo image" />
           {/* Mobile menu button */}
           <button

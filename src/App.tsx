@@ -11,14 +11,14 @@ import { PostLg } from "@/components/content/postLg";
 import { PostXl } from "@/components/content/postXl";
 
 // Images
-import banner from "@/images/banner.png";
-import circle from "@/images/circle.png";
-import sketch1 from "@/images/sketch1.png";
-import sketch2 from "@/images/sketch2.png";
-import object1 from "@/images/object1.png";
-import object2 from "@/images/object2.png";
-import object3 from "@/images/object3.png";
-import object4 from "@/images/object4.png";
+import banner from "@/assets/images/banner.png";
+import circle from "@/assets/images/circle.png";
+import sketch1 from "@/assets/images/sketch1.png";
+import sketch2 from "@/assets/images/sketch2.png";
+import object1 from "@/assets/images/object1.png";
+import object2 from "@/assets/images/object2.png";
+import object3 from "@/assets/images/object3.png";
+import object4 from "@/assets/images/object4.png";
 import { Reveal } from "@/components/reveal";
 
 function App() {
@@ -46,13 +46,13 @@ function App() {
         {/* Section title */}
         <Title.Root>
           <div className="flex flex-col items-center gap-12">
-          <Title.Text
-            variant="blue"
-            size='xl'
-            text="Conteúdos"
-            coloredText=" para você"
-          />
-          <Title.Bar variant="blue" />
+            <Title.Text
+              variant="blue"
+              size="xl"
+              text="Conteúdos"
+              coloredText=" para você"
+            />
+            <Title.Bar variant="blue" />
           </div>
         </Title.Root>
 
@@ -70,14 +70,17 @@ function App() {
             </div>
 
             {/* Articles */}
-            <div className="w-full lg:w-1/3 flex flex-col gap-2">
-              <h2 className="text-xlt_pink text-3xl py-2">Outras postagens</h2>
-              <hr className="pb-2" />
+            <div className="w-full lg:w-1/3 flex flex-col gap-4">
+              <h2 className="text-xlt_pink text-4xl py-2 font-myriadSemi">
+                Outras postagens:
+              </h2>
+              <hr className="pb-2 border-[#707070]/25" />
               <PostSm />
               <Button variant="secondary" size="lg">
                 Ver mais
               </Button>
             </div>
+
             <img
               src={object1}
               alt="Object image"
@@ -102,7 +105,6 @@ function App() {
 
             {/* Bloco 1 */}
             <div className="space-y-12 w-full lg:w-1/3">
-
               <Title.Root>
                 <Title.Text text="Principais notícias" variant="white" />
                 <Title.Bar variant="white" />
@@ -173,7 +175,7 @@ function App() {
       {/* Footer */}
       <footer className="bg-[#022776] flex flex-col lg:flex-row items-center justify-between py-4 px-12 text-[#4B8AA4] font-myriadSemi">
         <p className="text-center">
-          copyright 2022 - Todos os direitos reservados | Política de
+          Copyright 2022 - Todos os direitos reservados | Política de
           privacidade | Condições gerais
         </p>
         <p>desenvolvido por: Olivas Digital</p>
